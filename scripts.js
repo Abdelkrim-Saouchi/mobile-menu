@@ -11,6 +11,7 @@ hamburgerIcon.addEventListener('click', () => {
 mainMenuItems.forEach((item) => {
   item.addEventListener('click', () => {
     item.classList.toggle('active');
+    item.querySelector('.wrapper img').classList.toggle('move-up');
   });
 });
 

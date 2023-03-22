@@ -74,11 +74,6 @@ header .site-logo img {
   color: inherit;
 }
 
-/* ul li.active > a,
-ul li:hover > a {
-  color: blueviolet;
-} */
-
 .menu-content .wrapper {
   margin-bottom: var(--spacing);
   display: flex;
@@ -88,6 +83,11 @@ ul li:hover > a {
 
 .wrapper img {
   max-width: 20px;
+  transition: transform 300ms ease-in-out;
+}
+
+.wrapper img.move-up {
+  transform: rotateX(180deg);
 }
 
 .menu-content.show {
@@ -104,4 +104,9 @@ ul li:hover > a {
 .main-menu li.active .sub-menu,
 .sub-menu li.active-sub .sub-sub-menu {
   display: block;
+}
+
+.main-menu li.active > .wrapper a,
+.sub-sub-menu a:hover {
+  color: blueviolet;
 }
