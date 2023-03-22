@@ -1,0 +1,53 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100dvh;
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.container {
+  padding: 16px 24px;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid hsl(0, 0%, 80%);
+}
+
+.hamburger-logo .hamburger-pipe {
+  width: 25px;
+  height: 2px;
+  background-color: black;
+  color: black;
+  margin-bottom: 5px;
+  transition: all 500ms ease-in-out;
+}
+
+header .site-logo img {
+  width: 50px;
+}
+
+.hamburger-logo.opened .middle {
+  visibility: hidden;
+}
+
+.hamburger-logo.opened .top {
+  transform: rotateZ(45deg) translateY(10px);
+  margin-left: 25%;
+}
+
+.hamburger-logo.opened .bottom {
+  transform: rotateZ(-45deg) translateY(-10px);
+  margin-left: 25%;
+}
